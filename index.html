@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script  defer src="script.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    
+
+    <title>Sign-Up</title>
+</head>
+<body onload="autoGenerate()">
+
+<div class="container mt-5">
+    <form action="" id="register-form" class="p-4 border rounded bg-light shadow" onsubmit="return validate(event)">
+        <h1 class="text-center mb-4">Registration Form</h1>
+
+        <div class="mb-3">
+            <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
+            <input type="text" id="name" class="form-control">
+            <div class="text-danger small" id="err-name"></div>
+        </div>
+
+        <div class="mb-3">
+            <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+            <input type="text" id="email" class="form-control">
+            <div class="text-danger small" id="err-email"></div>
+        </div>
+
+        <div class="mb-3">
+            <label for="contact" class="form-label">Contact No <span class="text-danger">*</span></label>
+            <input type="text" id="contact" class="form-control">
+            <div class="text-danger small" id="err-contact"></div>
+        </div>
+
+        <div class="mb-3">
+            <label for="pass" class="form-label">Password <span class="text-danger">*</span></label>
+            <input type="password" id="pass" class="form-control">
+            <div class="text-danger small" id="err-pass"></div>
+        </div>
+
+        <div class="mb-3">
+            <label for="qualification" class="form-label">Qualification <span class="text-danger">*</span></label>
+            <input type="text" id="qualification" class="form-control">
+            <div class="text-danger small" id="err-qual"></div>
+        </div>
+
+        <div class="mb-3">
+            <label for="percentage" class="form-label">Percentage <span class="text-danger">*</span></label>
+            <input type="text" id="percentage" class="form-control">
+            <div class="text-danger small" id="err-percent"></div>
+        </div>
+
+        <div class="mb-3">
+            <label for="match" class="form-label">Match No <span class="text-danger">*</span></label>
+            <input type="text" id="match" class="form-control" value="0">
+            <div class="text-danger small" id="err-match"></div>
+        </div>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-primary px-4">Submit</button>
+        </div>
+    </form>
+</div>
+
+</body>
+
+<script>
+    function autoGenerate()
+{
+  const match= Math.floor(Math.random()* 100) + 1 ;
+  document.getElementById("match").value=match;
+  return;
+}
+</script>
+</html>
